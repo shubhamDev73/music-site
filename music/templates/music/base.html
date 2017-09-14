@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Music{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}">
+</head>
+<body>
+<a href="{% url 'music:album-add' %}">Add album</a><br>
+{% block body %}
+{% endblock %}
+<a href="{% url 'music:index' %}">Home</a><br>
+</body>
+</html>
